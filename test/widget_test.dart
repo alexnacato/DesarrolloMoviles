@@ -5,6 +5,8 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:ejericicios/Ejercicio3_Promedio_Edad/Controlador/edades_controlador.dart' show EscuelaController;
+import 'package:ejericicios/Ejercicio3_Promedio_Edad/Modelo/escuela_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -12,8 +14,12 @@ import 'package:ejericicios/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Crear el controlador para el test
+    final escuela = Escuela(totalSalones: 8);
+    final controlador = EscuelaController(escuela: escuela);
+
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(MyApp(controlador: controlador));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
