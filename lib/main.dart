@@ -12,6 +12,7 @@ import 'Ejercicio2_Inversion/View/pagina_inversion.dart';
 import 'Ejercicio2_Inversion/View/pagina_resultado.dart';
 import 'Ejercio4_CajaRegistradora/Vista/datos_vista.dart';
 import 'Ejercio4_CajaRegistradora/Vista/resultado_vista.dart';
+import 'Ejercicio5_ventas/Vista/ventasView.dart';
 
 void main() {
   // Crear el modelo y controlador para Ejercicio 3
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         ),
         '/ingresoCajaRegistradora': (context) =>  datosVista(),
         '/cajaRegistradoResultado': (context) =>  ResultadoVista(),
+        '/ventas': (context) => VentasView(),
       },
     );
   }
@@ -88,6 +90,11 @@ class PaginaMenu extends StatelessWidget {
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/ingresoCajaRegistradora'),
               child: const Text('Ejercicio 4: Caja Registradora'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/ventas'),
+              child: const Text('Ejercicio 5: Ventas'),
             ),
           ],
         ),
