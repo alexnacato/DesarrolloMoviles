@@ -42,13 +42,25 @@ class _datosLogica extends State<datosVista>{
       monedaCentavo: int.tryParse(monedaUnoCrt.text) ?? -1,
     );
 
-    // Navegar a la pantalla de resultado y enviar el total
+    if (total == -1) {
+      // Mostrar mensaje de error
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Valores inválidos"),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return; // No continúa con el Navigator
+    }
+
+    
     Navigator.pushNamed(
       context,
       '/cajaRegistradoResultado',
-      arguments: total, // Aquí le pasamos el total calculado
+      arguments: total,
     );
   }
+
 
 
   @override
@@ -57,7 +69,7 @@ class _datosLogica extends State<datosVista>{
       appBar: AppBar(
         title: Text("Cuenta Caja Registradora"),
       ),
-      body: SingleChildScrollView(   // <- Aquí
+      body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
         child: Column(
           children: [

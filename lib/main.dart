@@ -10,8 +10,8 @@ import 'Ejercicio1_Facturacion/View/pagina_web.dart';
 import 'Ejercicio1_Facturacion/View/pagina_resultado.dart';
 import 'Ejercicio2_Inversion/View/pagina_inversion.dart';
 import 'Ejercicio2_Inversion/View/pagina_resultado.dart';
-import 'Ejercio4_CajaRegistradora/Vista/datos_vista.dart';
-import 'Ejercio4_CajaRegistradora/Vista/resultado_vista.dart';
+import 'Ejercicio4_CajaRegistradora/Vista/datos_vista.dart';
+import 'Ejercicio4_CajaRegistradora/Vista/resultado_vista.dart';
 import 'Ejercicio5_ventas/Vista/ventasView.dart';
 
 void main() {
